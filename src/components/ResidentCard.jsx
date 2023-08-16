@@ -15,26 +15,40 @@ const ResidentCard = ({ residentUrl }) => {
          .catch((err) => console.log(err));
    }, []);
    return (
-      <article>
+      <article className="flex flex-col max-w-[402px] max-h-[640px] items-center border-2 border-[#8EFF8B] m-4">
          <header>
-            <div>
-               <img src={residentInfo?.image} alt="" />
+            <div className="border-2 border-[#8EFF8B]">
+               <img
+                  className="w-[437px] max-h-[402px] "
+                  src={residentInfo?.image}
+                  alt=""
+               />
             </div>
-            <div className="flex items-center gap-2 p-2">
+            <div className="flex items-center gap-2 p-2 justify-center">
                <div
-                  className={`h-[10px] aspect-square rounded-full ${
+                  className={`h-[10px] aspect-square rounded-full  ${
                      residentStatus[residentInfo?.status]
                   }`}
                ></div>
                {residentInfo?.status}
             </div>
          </header>
-         <section>
-            <h3>{residentInfo?.name}</h3>
+         <section className="flex flex-col">
+            <h3 className="font-bold text-xl">{residentInfo?.name}</h3>
+
             <ul>
-               <li>Species: {residentInfo?.species}</li>
-               <li>Origin: {residentInfo?.origin.name}</li>
-               <li>Times appear: {residentInfo?.episode.length}</li>
+               <li className="flex space-x-5">
+                  <p className="text-[#938686]">Species </p>
+                  <p>{residentInfo?.species}</p>
+               </li>
+               <li className="flex space-x-5">
+                  <p className="text-[#938686]">Origin </p>
+                  <p>{residentInfo?.origin.name}</p>
+               </li>
+               <li className="flex space-x-5">
+                  <p className="text-[#938686]">Times appear </p>
+                  <p>{residentInfo?.episode.length}</p>
+               </li>
             </ul>
          </section>
       </article>

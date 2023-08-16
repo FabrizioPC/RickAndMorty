@@ -27,12 +27,11 @@ function App() {
       fetchDimension(randomDimension);
    }, []);
    return (
-      <main className="bg-red-500 min-h-screen font-firacode text-white">
+      <main className="min-h-screen font-firacode text-white">
          <div className="bg-[url(/images/backgroundHeader.png)] flex flex-col items-center ">
-            <div className="">
-               <img src="/images/logoRick.png" alt="" />
-            </div>
+            <img src="/images/logoRick.png" alt="" />
             <LocationForm handleSubmit={handleSubmit} />
+            <p className="text-[#8EFF8B]">¡Welcome to the crazy universe!</p>
          </div>
          <div className="bg-[url(/images/backgroundPage.png)] min-h-screen">
             <LocationInfo currentLocation={currentLocation} />

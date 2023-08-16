@@ -2,7 +2,7 @@ import React from "react";
 
 const LocationInfo = ({ currentLocation }) => {
    return (
-      <section>
+      <section className="text-center">
          <h2>{currentLocation?.name}</h2>
          <ul>
             <li>Type: {currentLocation?.type}</li>

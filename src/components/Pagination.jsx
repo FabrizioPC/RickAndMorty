@@ -2,10 +2,12 @@ import React from "react";
 
 const Pagination = ({ pages, currentPage, setCurrentPage }) => {
    return (
-      <ul>
+      <ul className="flex justify-center">
          {pages.map((page) => (
             <li
-               className={`${currentPage === page && "text-red-500"}`}
+               className={`m-1 p-4  sm:m-2 sm:p-5 ${
+                  currentPage === page && " bg-[#062226]"
+               } hover:bg-[#062226]/50`}
                key={page}
                onClick={() => setCurrentPage(page)}
             >
