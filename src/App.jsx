@@ -27,14 +27,20 @@ function App() {
       fetchDimension(randomDimension);
    }, []);
    return (
-      <main className="bg-black min-h-screen font-firacode text-white">
-         <div className="">TITLE</div>
-         <LocationForm handleSubmit={handleSubmit} />
-         <LocationInfo currentLocation={currentLocation} />
-         <ResidentList
-            residents={currentLocation?.residents ?? []}
-            currentLocation={currentLocation}
-         />
+      <main className="bg-red-500 min-h-screen font-firacode text-white">
+         <div className="bg-[url(/images/backgroundHeader.png)] flex flex-col items-center ">
+            <div className="">
+               <img src="/images/logoRick.png" alt="" />
+            </div>
+            <LocationForm handleSubmit={handleSubmit} />
+         </div>
+         <div className="bg-[url(/images/backgroundPage.png)] min-h-screen">
+            <LocationInfo currentLocation={currentLocation} />
+            <ResidentList
+               residents={currentLocation?.residents ?? []}
+               currentLocation={currentLocation}
+            />
+         </div>
       </main>
    );
 }
