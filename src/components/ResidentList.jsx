@@ -24,7 +24,7 @@ const ResidentList = ({ residents, currentLocation }) => {
    }, [currentLocation]);
    return (
       <section>
-         <section className="flex flex-col items-center  sm:grid sm:grid-cols-2 justify-items-center ">
+         <section className="flex flex-col items-center  sm:grid sm:grid-cols-4 justify-items-center ">
             {residentsInPage.map((resident) => (
                <ResidentCard key={resident} residentUrl={resident} />
             ))}
